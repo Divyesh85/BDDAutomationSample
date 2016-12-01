@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="automation" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="50" bottomMargin="50" uuid="8849f79f-592f-45af-b7bf-e72ef13a7b9a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 3" fontSize="14" isBold="true"/>
+	<parameter name="team" class="java.lang.String"/>
+	<parameter name="environment" class="java.lang.String"/>
+	<parameter name="url" class="java.lang.String"/>
+	<parameter name="executionTime" class="java.lang.String"/>
+	<parameter name="browser" class="java.lang.String"/>
+	<parameter name="suite" class="java.lang.String"/>
+	<parameter name="passed" class="java.lang.Integer"/>
+	<parameter name="failed" class="java.lang.Integer"/>
+	<parameter name="skipped" class="java.lang.Integer"/>
+	<parameter name="chart" class="java.lang.Object"/>
+	<variable name="Chart" class="net.sf.jasperreports.engine.JRRenderable" calculation="System"/>
+	<title>
+		<band height="742">
+			<line>
+				<reportElement x="0" y="0" width="515" height="1" uuid="97ad5d94-599b-4ea0-9b60-db78c1b2349c"/>
+			</line>
+			<staticText>
+				<reportElement x="22" y="5" width="35" height="20" uuid="e2845ec3-52b3-4058-ac11-4c157c7cd93b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Team :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="30" width="72" height="20" uuid="1496ea77-5403-4d6a-8a58-c2d073fb6927"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Environment :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="56" width="27" height="20" uuid="00822f35-88ed-44dc-b377-b7150d766202"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[URL :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="82" width="85" height="20" uuid="b611f4bf-d9a6-46a2-987e-d1635a7538dd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Execution Time :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="108" width="48" height="20" uuid="53099194-993b-406f-b152-e764e1bad8ab"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Browser :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="134" width="35" height="20" uuid="2e889a8e-4e97-4859-9e23-73ca5ad2b05d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Suite :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="162" width="515" height="1" uuid="565b8352-9202-4960-b8bb-075c1c7104be"/>
+			</line>
+			<staticText>
+				<reportElement style="Heading 3" x="22" y="168" width="158" height="20" uuid="91df3e19-0a3c-4706-94c2-328676b0c520"/>
+				<text><![CDATA[Test Cases by Result:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="194" width="43" height="20" uuid="282111e8-14be-40c4-b05a-afc3079ecfaa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Passed :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="221" width="40" height="20" uuid="81df7159-8196-4568-bbe7-b4f6e55e0bc2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Failed :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="248" width="50" height="20" uuid="084d05f6-be44-442a-bbb2-cd8499e459fd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Skipped :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="57" y="5" width="444" height="20" uuid="1d56a051-7de7-4c9e-8456-d4eedb3d5c0e"/>
+				<textFieldExpression><![CDATA[$P{team}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="94" y="30" width="408" height="20" uuid="0c8a6d0d-bfaa-42c3-9c15-acdf56f5883d"/>
+				<textFieldExpression><![CDATA[$P{environment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="56" width="450" height="20" uuid="09a900e2-c00b-4568-8022-b854384bd22a"/>
+				<textFieldExpression><![CDATA[$P{url}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="82" width="396" height="20" uuid="91d5badc-e1fb-4435-8ead-e9527014eef0"/>
+				<textFieldExpression><![CDATA[$P{executionTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="108" width="429" height="20" uuid="50e24650-53ad-4514-91fc-1182e1ff1adc"/>
+				<textFieldExpression><![CDATA[$P{browser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="57" y="134" width="446" height="20" uuid="e5ea18be-507a-4425-846e-140c40e18d99"/>
+				<textFieldExpression><![CDATA[$P{suite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="194" width="434" height="20" uuid="4e627a61-2de8-4248-9fae-d5a1ca57e98f"/>
+				<textFieldExpression><![CDATA[$P{passed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="221" width="441" height="20" uuid="add8da14-4d25-4d2e-9dd9-bd548f82759c"/>
+				<textFieldExpression><![CDATA[$P{failed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="248" width="431" height="20" uuid="cc033d65-ec74-4bd8-a405-c1be7c0822dd"/>
+				<textFieldExpression><![CDATA[$P{skipped}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="Clip" hAlign="Center" hyperlinkType="Reference">
+				<reportElement x="22" y="290" width="489" height="278" uuid="f76b6fcc-59d0-4228-952e-4ecec7f9de64"/>
+				<imageExpression><![CDATA[$P{chart}]]></imageExpression>
+				<hyperlinkReferenceExpression><![CDATA["http://www.jfree.org/jfreechart"]]></hyperlinkReferenceExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="-43" width="515" height="27" uuid="f90395cb-d7a0-4790-9359-b0c51ec7430a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Automation Test Execution Report]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

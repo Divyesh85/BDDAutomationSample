@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mode : 'debug' or '' useGrid : 'true' or 'false', if mode == 'debug', 
+	it would works. -->
+<root mode="debug" useGrid="false" defaultBrowser="chrome"
+	defaultBrowserVersion="" defaultPlatform="WINDOWS" defaultEnv="QA">
+	<teamName>Bdd Automation</teamName>
+	<environment type="QA">
+		<homePageUrl>http://ecquikrqa.morningstar.com/</homePageUrl>
+		<sleepInMillis>250</sleepInMillis>
+		<timeOutInSeconds>60</timeOutInSeconds>
+		<retryCount>1</retryCount>
+		<server>
+			<CIHub>http://US-VDI-SEL42.morningstar.com:4444/wd/hub</CIHub>
+			<debugHub>http://US-VDI-SEL42.morningstar.com:4444/wd/hub</debugHub>
+			<FTPHost>US-VDI-SEL42.morningstar.com</FTPHost>
+			<FTPPort>21</FTPPort>
+		</server>
+		<users>
+		</users>
+		<profile>
+			<firefox></firefox>
+			<chrome></chrome>
+			<safari></safari>
+		</profile>
+		<report>
+			<emailRecipients>
+				<recipient>divyesh.tandel@morningstar.com</recipient>
+			</emailRecipients>
+			<emailSender>
+				<userName>MercuryAutoTester@morningstar.com</userName>
+				<password>Mercury1234</password>
+				<fromName>Automation Test</fromName>
+				<host>internalmail.morningstar.com</host>
+				<port>25</port>
+			</emailSender>
+		</report>
+	</environment>
+	<environment type="NEWQA">
+		<homePageUrl>http://euiwtqaweb1:91/</homePageUrl>
+		<sleepInMillis>250</sleepInMillis>
+		<timeOutInSeconds>60</timeOutInSeconds>
+		<retryCount>2</retryCount>
+		<server>
+			<CIHub>http://US-VDI-SEL42.morningstar.com:4444/wd/hub</CIHub>
+			<debugHub>http://US-VDI-SEL42.morningstar.com:4444/wd/hub</debugHub>
+			<FTPHost>US-VDI-SEL42.morningstar.com</FTPHost>
+			<FTPPort>21</FTPPort>
+		</server>
+		<users>
+		</users>
+		<profile>
+			<firefox></firefox>
+			<chrome></chrome>
+			<safari></safari>
+		</profile>
+		<report>
+			<emailRecipients>
+				<recipient>charles.chang@morningstar.com</recipient>
+			</emailRecipients>
+			<emailSender>
+				<userName>MercuryAutoTester@morningstar.com</userName>
+				<password>Mercury1234</password>
+				<fromName>Automation Test</fromName>
+				<host>internalmail.morningstar.com</host>
+				<port>25</port>
+			</emailSender>
+		</report>
+	</environment>
+</root>
